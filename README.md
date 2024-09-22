@@ -2,7 +2,8 @@
 
 Dash Mosaic is a flexible, resizable, and draggable layout component for Dash applications. It allows users to split the view into multiple panes that can be resized, rearranged, and customized.
 
-![Imgur](https://imgur.com/mBKaN8v.gif)
+![Dash Mosaic](https://imgur.com/yBAK6si.gif)
+
 ## Features
 
 - Flexible layout with resizable and draggable panes
