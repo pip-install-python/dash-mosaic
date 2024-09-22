@@ -1,0 +1,185 @@
+{
+  "src/lib/components/DashMosaic.react.js": {
+    "description": "DashMosaic is a component that provides a flexible, resizable, and draggable layout for organizing content.\nIt allows users to split the view into multiple panes that can be resized, rearranged, and customized.",
+    "displayName": "DashMosaic",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "layout": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The layout configuration for the mosaic. It defines the structure and arrangement of the panes.",
+        "defaultValue": {
+          "value": "{\n    direction: 'row',\n    first: 1,\n    second: {\n        direction: 'column',\n        first: 2,\n        second: 3,\n    },\n    splitPercentage: 40,\n}",
+          "computed": false
+        }
+      },
+      "theme": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "\"Blueprint\"",
+              "computed": false
+            },
+            {
+              "value": "\"Blueprint Dark\"",
+              "computed": false
+            },
+            {
+              "value": "\"None\"",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "The theme to apply to the mosaic. Options are 'Blueprint', 'Blueprint Dark', or 'None'.",
+        "defaultValue": {
+          "value": "'Blueprint'",
+          "computed": false
+        }
+      },
+      "renderTile": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "A function that renders the content of each tile. It receives the tile ID and path as arguments."
+      },
+      "zeroStateView": {
+        "type": {
+          "name": "element"
+        },
+        "required": false,
+        "description": "The component to display when there are no tiles (zero state)."
+      },
+      "onChange": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function that is called when the layout changes.",
+        "defaultValue": {
+          "value": "() => {\n}",
+          "computed": false
+        }
+      },
+      "onRelease": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function that is called when the user releases a tile after dragging.",
+        "defaultValue": {
+          "value": "() => {}",
+          "computed": false
+        }
+      },
+      "resize": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Object containing resize-related options for the mosaic."
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes to Dash, to make them available for callbacks."
+      },
+      "tileContent": {
+        "type": {
+          "name": "objectOf",
+          "value": {
+            "name": "node"
+          }
+        },
+        "required": false,
+        "description": "An object containing the content for each tile, keyed by tile ID.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline styles to apply to the mosaic container.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "windowTitles": {
+        "type": {
+          "name": "objectOf",
+          "value": {
+            "name": "string"
+          }
+        },
+        "required": false,
+        "description": "An object containing custom titles for each window, keyed by tile ID.",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "showSplitButton": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show the split button in the tile toolbar.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showExpandButton": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show the expand button in the tile toolbar.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showRemoveButton": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show the remove button in the tile toolbar.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showNavbar": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show the navbar at the top of the mosaic.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      }
+    }
+  }
+}

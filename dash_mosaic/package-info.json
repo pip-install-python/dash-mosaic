@@ -1,0 +1,106 @@
+{
+  "name": "dash_mosaic",
+  "version": "0.0.1",
+  "description": "react mosaic for dash",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pip-install-python/dash-mosaic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pip-install-python/dash-mosaic/issues"
+  },
+  "homepage": "https://github.com/pip-install-python/dash-mosaic",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.serve.config.js --open",
+    "validate-init": "python _validate_init.py",
+    "prepublishOnly": "npm run validate-init",
+    "build:js": "webpack --mode production",
+    "build:backends": "dash-generate-components ./src/lib/components dash_mosaic -p package-info.json --r-prefix '' --jl-prefix '' --ignore \\.test\\. --ignore assets",    "build:backends-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:backends)",
+    "build": "npm run build:js && npm run build:backends",
+    "build:activated": "npm run build:js && npm run build:backends-activated"
+  },
+  "author": "Pip Install Python <pipinstallpython@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@blueprintjs/core": "^5.13.0",
+    "@blueprintjs/icons": "^5.13.0",
+    "lodash": "^4.17.21",
+    "ramda": "^0.26.1",
+    "react-mosaic-component": "^6.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.22.2",
+    "@babel/preset-react": "^7.22.3",
+    "@plotly/dash-component-plugins": "^1.2.3",
+    "@plotly/webpack-dash-dynamic-import": "^1.2.0",
+    "@svgr/webpack": "^6.5.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^9.1.0",
+    "copyfiles": "^2.1.1",
+    "css-loader": "^6.8.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-react": "^7.14.2",
+    "file-loader": "^6.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-docgen": "^5.4.3",
+    "react-dom": "^18.3.1",
+    "style-loader": "^3.3.3",
+    "styled-jsx": "^5.1.6",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "engines": {
+    "node": ">=8.11.0",
+    "npm": ">=6.1.0"
+  },
+  "componentProperties": {
+    "DashMosaic": {
+      "props": {
+        "id": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": "The ID used to identify this component in Dash callbacks."
+        },
+        "layout": {
+          "type": {
+            "name": "object"
+          },
+          "required": false,
+          "description": "The layout configuration for the mosaic."
+        },
+        "theme": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": "The theme to apply to the mosaic."
+        },
+        "tileContent": {
+          "type": {
+            "name": "object"
+          },
+          "required": false,
+          "description": "An object containing the content for each tile."
+        },
+        "style": {
+          "type": {
+            "name": "object"
+          },
+          "required": false,
+          "description": "Inline style to apply to the mosaic container."
+        }
+      }
+    }
+  }
+}
+

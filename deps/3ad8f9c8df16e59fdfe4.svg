@@ -1,0 +1,1 @@
+export default __webpack_public_path__ + "assets/icons/blueprint-icons-20.svg";

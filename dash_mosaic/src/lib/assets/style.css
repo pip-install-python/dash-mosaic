@@ -1,0 +1,168 @@
+.mosaic.mosaic-blueprint-theme {
+  background: #A7B6C2;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-zero-state {
+  background: #E1E8ED;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-zero-state .default-zero-state-icon {
+  font-size: 120px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-split:hover {
+  background: none;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-split:hover .mosaic-split-line {
+  box-shadow: 0 0 0 1px #2B95D6;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-drop-target .drop-target-container .drop-target,
+.mosaic.mosaic-blueprint-theme.mosaic-drop-target .drop-target-container .drop-target {
+  background: rgba(72, 175, 240, 0.2);
+  border: 2px solid #2B95D6;
+  transition: opacity 100ms;
+  border-radius: 3px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window,
+.mosaic.mosaic-blueprint-theme .mosaic-preview {
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-toolbar {
+  box-shadow: 0 1px 1px rgba(16, 22, 26, 0.15);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-toolbar.draggable:hover .mosaic-window-title {
+  color: #10161A;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-toolbar.draggable:hover {
+  background: linear-gradient(to bottom, #FFFFFF, #F5F8FA);
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-title {
+  font-weight: 600;
+  color: #394B59;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-controls .separator {
+  border-left: 1px solid #D8E1E8;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-controls .bp3-button,
+.mosaic.mosaic-blueprint-theme .mosaic-window-controls .bp3-button:before {
+  color: #738694;
+}
+
+.mosaic.mosaic-blueprint-theme .default-preview-icon {
+  font-size: 72px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-body {
+  border-top-width: 0;
+  background: #F5F8FA;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-additional-actions-bar {
+  transition: height 250ms;
+  box-shadow: 0 1px 1px rgba(16, 22, 26, 0.15);
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-window-additional-actions-bar .bp3-button,
+.mosaic.mosaic-blueprint-theme .mosaic-window-additional-actions-bar .bp3-button:before {
+  color: #738694;
+}
+
+.mosaic.mosaic-blueprint-theme.additional-controls-open .mosaic-window-toolbar {
+  box-shadow: none;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-preview {
+  border: 1px solid #8A9BA8;
+}
+
+.mosaic.mosaic-blueprint-theme .mosaic-preview h4 {
+  color: #394B59;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark {
+  background: #202B33;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-zero-state {
+  background: #30404D;
+  box-shadow: none;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-split:hover .mosaic-split-line {
+  box-shadow: 0 0 0 1px #137CBD;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-drop-target .drop-target-container .drop-target,
+.mosaic.mosaic-blueprint-theme.bp3-dark.mosaic-drop-target .drop-target-container .drop-target {
+  background: rgba(16, 107, 163, 0.2);
+  border-color: #137CBD;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-toolbar,
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-additional-actions-bar {
+  background: #30404D;
+  box-shadow: 0 1px 1px rgba(16, 22, 26, 0.4);
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window,
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-preview {
+  box-shadow: none;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-toolbar.draggable:hover .mosaic-window-title {
+  color: #FFFFFF;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-toolbar.draggable:hover {
+  background: linear-gradient(to bottom, #394B59, #30404D);
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-title {
+  color: #D8E1E8;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-controls .separator {
+  border-color: #5C7080;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-controls .bp3-button,
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-controls .bp3-button:before {
+  color: #A7B6C2;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-body {
+  background: #293742;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-additional-actions-bar .bp3-button,
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-window-additional-actions-bar .bp3-button:before {
+  color: #BFCCD6;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark.additional-controls-open .mosaic-window-toolbar {
+  box-shadow: none;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-preview {
+  border-color: #5C7080;
+}
+
+.mosaic.mosaic-blueprint-theme.bp3-dark .mosaic-preview h4 {
+  color: #EBF1F5;
+}

@@ -1,0 +1,13 @@
+Package: dashMosaic
+Title: react mosaic for dash
+Version: 0.0.1
+Description: react mosaic for dash
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/pip-install-python/dash-mosaic
+BugReports: https://github.com/pip-install-python/dash-mosaic/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true
