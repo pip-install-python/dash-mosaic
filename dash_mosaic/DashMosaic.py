@@ -1,6 +1,21 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
+import typing  # noqa: F401
+from typing_extensions import TypedDict, NotRequired, Literal # noqa: F401
 from dash.development.base_component import Component, _explicitize_args
+
+ComponentType = typing.Union[
+    str,
+    int,
+    float,
+    Component,
+    None,
+    typing.Sequence[typing.Union[str, int, float, Component, None]],
+]
+
+NumberType = typing.Union[
+    typing.SupportsFloat, typing.SupportsInt, typing.SupportsComplex
+]
 
 
 class DashMosaic(Component):
@@ -13,7 +28,7 @@ Keyword arguments:
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
 
-- layout (dict; default {    direction: 'row',    first: 1,    second: {        direction: 'column',        first: 2,        second: 3,    },    splitPercentage: 40,}):
+- layout (dict | string | number; default {    direction: 'row',    first: 1,    second: {        direction: 'column',        first: 2,        second: 3,    },    splitPercentage: 40,}):
     The layout configuration for the mosaic. It defines the structure
     and arrangement of the panes.
 
@@ -32,9 +47,6 @@ Keyword arguments:
 - showSplitButton (boolean; default True):
     Whether to show the split button in the tile toolbar.
 
-- style (dict; optional):
-    Inline styles to apply to the mosaic container.
-
 - theme (a value equal to: "Blueprint", "Blueprint Dark", "None"; default 'Blueprint'):
     The theme to apply to the mosaic. Options are 'Blueprint',
     'Blueprint Dark', or 'None'.
@@ -52,8 +64,27 @@ Keyword arguments:
     _base_nodes = ['zeroStateView', 'children']
     _namespace = 'dash_mosaic'
     _type = 'DashMosaic'
-    @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, layout=Component.UNDEFINED, theme=Component.UNDEFINED, renderTile=Component.UNDEFINED, zeroStateView=Component.UNDEFINED, onChange=Component.UNDEFINED, onRelease=Component.UNDEFINED, resize=Component.UNDEFINED, tileContent=Component.UNDEFINED, style=Component.UNDEFINED, windowTitles=Component.UNDEFINED, showSplitButton=Component.UNDEFINED, showExpandButton=Component.UNDEFINED, showRemoveButton=Component.UNDEFINED, showNavbar=Component.UNDEFINED, **kwargs):
+
+
+    def __init__(
+        self,
+        id: typing.Optional[typing.Union[str, dict]] = None,
+        layout: typing.Optional[typing.Union[dict, str, NumberType]] = None,
+        theme: typing.Optional[Literal["Blueprint", "Blueprint Dark", "None"]] = None,
+        renderTile: typing.Optional[typing.Any] = None,
+        zeroStateView: typing.Optional[Component] = None,
+        onChange: typing.Optional[typing.Any] = None,
+        onRelease: typing.Optional[typing.Any] = None,
+        resize: typing.Optional[dict] = None,
+        tileContent: typing.Optional[typing.Dict[typing.Union[str, float, int], ComponentType]] = None,
+        style: typing.Optional[typing.Any] = None,
+        windowTitles: typing.Optional[typing.Dict[typing.Union[str, float, int], str]] = None,
+        showSplitButton: typing.Optional[bool] = None,
+        showExpandButton: typing.Optional[bool] = None,
+        showRemoveButton: typing.Optional[bool] = None,
+        showNavbar: typing.Optional[bool] = None,
+        **kwargs
+    ):
         self._prop_names = ['id', 'layout', 'resize', 'showExpandButton', 'showNavbar', 'showRemoveButton', 'showSplitButton', 'style', 'theme', 'tileContent', 'windowTitles', 'zeroStateView']
         self._valid_wildcard_attributes =            []
         self.available_properties = ['id', 'layout', 'resize', 'showExpandButton', 'showNavbar', 'showRemoveButton', 'showSplitButton', 'style', 'theme', 'tileContent', 'windowTitles', 'zeroStateView']
@@ -64,3 +95,5 @@ Keyword arguments:
         args = {k: _locals[k] for k in _explicit_args}
 
         super(DashMosaic, self).__init__(**args)
+
+setattr(DashMosaic, "__init__", _explicitize_args(DashMosaic.__init__))
