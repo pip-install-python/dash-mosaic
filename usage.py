@@ -129,7 +129,7 @@ app.layout = html.Div([
         windowTitles=window_titles,
         showSplitButton=False, # Example: disabling the remove button
         showExpandButton=True,
-        showRemoveButton=False,
+        showRemoveButton=True,
         showNavbar=False
     ),
     dcc.Store(id='window-count', data=3),
@@ -145,4 +145,4 @@ def display_output(layout):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=9111)
+    app.run(debug=True, port=9111)
