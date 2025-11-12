@@ -20,7 +20,7 @@ tileContent=NULL, windowTitles=NULL, zeroStateView=NULL)
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
-\item{layout}{Named list | character | numeric. The layout configuration for the mosaic. It defines the structure and arrangement of the panes.}
+\item{layout}{Named list | numeric. The layout configuration for the mosaic. It defines the structure and arrangement of the panes.}
 
 \item{onChange}{Callback function that is called when the layout changes.}
 

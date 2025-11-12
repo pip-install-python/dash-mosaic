@@ -285,7 +285,6 @@ DashMosaic.propTypes = {
      */
     layout: PropTypes.oneOfType([
         PropTypes.object,
-        PropTypes.string,
         PropTypes.number,
     ]),
 

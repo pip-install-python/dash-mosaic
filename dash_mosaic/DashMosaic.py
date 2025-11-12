@@ -28,7 +28,7 @@ Keyword arguments:
 - id (string; optional):
     The ID used to identify this component in Dash callbacks.
 
-- layout (dict | string | number; default {    direction: 'row',    first: 1,    second: {        direction: 'column',        first: 2,        second: 3,    },    splitPercentage: 40,}):
+- layout (dict | number; default {    direction: 'row',    first: 1,    second: {        direction: 'column',        first: 2,        second: 3,    },    splitPercentage: 40,}):
     The layout configuration for the mosaic. It defines the structure
     and arrangement of the panes.
 
@@ -69,7 +69,7 @@ Keyword arguments:
     def __init__(
         self,
         id: typing.Optional[typing.Union[str, dict]] = None,
-        layout: typing.Optional[typing.Union[dict, str, NumberType]] = None,
+        layout: typing.Optional[typing.Union[dict, NumberType]] = None,
         theme: typing.Optional[Literal["Blueprint", "Blueprint Dark", "None"]] = None,
         renderTile: typing.Optional[typing.Any] = None,
         zeroStateView: typing.Optional[Component] = None,

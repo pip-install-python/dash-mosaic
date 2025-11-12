@@ -10,7 +10,7 @@ DashMosaic is a component that provides a flexible, resizable, and draggable lay
 It allows users to split the view into multiple panes that can be resized, rearranged, and customized.
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
-- `layout` (Dict | String | Real; optional): The layout configuration for the mosaic. It defines the structure and arrangement of the panes.
+- `layout` (Dict | Real; optional): The layout configuration for the mosaic. It defines the structure and arrangement of the panes.
 - `resize` (Dict; optional): Object containing resize-related options for the mosaic.
 - `showExpandButton` (Bool; optional): Whether to show the expand button in the tile toolbar.
 - `showNavbar` (Bool; optional): Whether to show the navbar at the top of the mosaic.
