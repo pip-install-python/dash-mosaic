@@ -62,18 +62,27 @@ const DashMosaic = (props) => {
     };
 
     const autoArrange = () => {
+        if (!layout) {
+            return;
+        }
         const leaves = getLeaves(layout);
+        if (!leaves.length) {
+            return;
+        }
         const newLayout = createBalancedTreeFromLeaves(leaves);
         handleChange(newLayout);
     };
 
     const addToTopRight = () => {
         let currentNode = layout;
-        const totalWindowCount = getLeaves(currentNode).length;
-        if (currentNode) {
-            const path = getPathToCorner(currentNode, Corner.TOP_RIGHT);
-            const parent = getNodeAtPath(currentNode, dropRight(path));
-            const destination = getNodeAtPath(currentNode, path);
+        const hasLayout = currentNode !== null && currentNode !== undefined;
+        const leaves = hasLayout ? getLeaves(currentNode) : [];
+        const totalWindowCount = leaves.length;
+        if (hasLayout) {
+            const hasTreeStructure = typeof currentNode === 'object';
+            const path = hasTreeStructure ? getPathToCorner(currentNode, Corner.TOP_RIGHT) : [];
+            const parent = path.length ? getNodeAtPath(currentNode, dropRight(path)) : null;
+            const destination = path.length ? getNodeAtPath(currentNode, path) : currentNode;
             const direction = parent ? getOtherDirection(parent.direction) : 'row';
 
             let first, second;
@@ -85,18 +94,22 @@ const DashMosaic = (props) => {
                 second = destination;
             }
 
-            currentNode = updateTree(currentNode, [
-                {
-                    path,
-                    spec: {
-                        $set: {
-                            direction,
-                            first,
-                            second,
+            const replacementNode = {
+                direction,
+                first,
+                second,
+            };
+
+            currentNode = path.length
+                ? updateTree(currentNode, [
+                    {
+                        path,
+                        spec: {
+                            $set: replacementNode,
                         },
                     },
-                },
-            ]);
+                ])
+                : replacementNode;
         } else {
             currentNode = totalWindowCount + 1;
         }
@@ -270,7 +283,10 @@ DashMosaic.propTypes = {
     /**
      * The layout configuration for the mosaic. It defines the structure and arrangement of the panes.
      */
-    layout: PropTypes.object,
+    layout: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.number,
+    ]),
 
     /**
      * The theme to apply to the mosaic. Options are 'Blueprint', 'Blueprint Dark', or 'None'.
