@@ -1,7 +1,7 @@
 {
   "name": "dash_mosaic",
-  "version": "0.0.1",
-  "description": "react mosaic for dash",
+  "version": "1.0.0",
+  "description": "A flexible, resizable, and draggable multi-pane layout component for Plotly Dash applications",
   "repository": {
     "type": "git",
     "url": "git://github.com/pip-install-python/dash-mosaic.git"

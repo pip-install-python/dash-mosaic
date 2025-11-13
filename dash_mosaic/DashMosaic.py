@@ -60,7 +60,7 @@ Keyword arguments:
 
 - zeroStateView (dash component; optional):
     The component to display when there are no tiles (zero state)."""
-    _children_props = ['zeroStateView', 'tileContent{}']
+    _children_props: typing.List[str] = ['zeroStateView', 'tileContent{}']
     _base_nodes = ['zeroStateView', 'children']
     _namespace = 'dash_mosaic'
     _type = 'DashMosaic'

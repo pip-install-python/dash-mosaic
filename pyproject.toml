@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dash-mosaic"
+dynamic = ["version"]
+description = "A flexible, resizable, and draggable multi-pane layout component for Plotly Dash applications"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Pip Install Python", email = "pipinstallpython@gmail.com"}
+]
+keywords = ["dash", "plotly", "react", "mosaic", "layout", "dashboard", "multi-pane", "resizable"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Dash",
+    "Operating System :: OS Independent",
+    "Environment :: Web Environment",
+]
+dependencies = [
+    "dash>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "dash[dev]>=2.0.0",
+    "plotly>=5.0.0",
+    "numpy>=1.20.0",
+    "pytest>=6.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/pip-install-python/dash-mosaic"
+Documentation = "https://github.com/pip-install-python/dash-mosaic"
+Repository = "https://github.com/pip-install-python/dash-mosaic"
+"Bug Reports" = "https://github.com/pip-install-python/dash-mosaic/issues"
+Changelog = "https://github.com/pip-install-python/dash-mosaic/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dash_mosaic*"]
+exclude = ["tests*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.eggs
+  | \.tox
+  | build
+  | dist
+  | node_modules
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
