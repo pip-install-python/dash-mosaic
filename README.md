@@ -24,22 +24,7 @@ Dash Mosaic is a powerful, flexible layout component for Dash applications that 
 pip install dash-mosaic
 ```
 
-### Asset Configuration
-
-After installation, you need to copy the following files from the package assets folder to your project's assets folder:
-
-```bash
-dash_mosaic/assets/8a26d7e1bb38c9c64a59.woff2
-dash_mosaic/assets/8a525ab91769f6d60c94.ttf
-dash_mosaic/assets/8b1c5e35bad17bae103e.woff2
-dash_mosaic/assets/9ad9cbe47f2f5821528d.woff
-dash_mosaic/assets/565ce5e4e7c8be823549.ttf
-dash_mosaic/assets/3843580eab4844b48210.woff
-dash_mosaic/assets/main.js
-dash_mosaic/assets/style.css
-```
-
-**Note:** We're working on automating this step in future releases. See [Contributing](#contributing) if you'd like to help.
+That's it! All assets (fonts, CSS, JavaScript) are automatically included and served by Dash when you install the package. No manual copying required.
 
 ## Quick Start
 
@@ -87,7 +72,7 @@ app.layout = html.Div([
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
 ```
 
 ## Layout Configuration
@@ -271,10 +256,10 @@ pytest
 
 Contributions are welcome! Here are some areas where we'd especially appreciate help:
 
-- **Automated Asset Inclusion** - Help automate the asset copying process during installation
 - **Additional Examples** - Create examples with different visualization libraries
 - **Documentation** - Improve API documentation and tutorials
 - **Testing** - Expand test coverage
+- **Performance Optimization** - Improve rendering performance for complex layouts
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 

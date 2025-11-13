@@ -39,8 +39,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Contributing guidelines
 - Code review checklist
 
+### Fixed
+- Assets (fonts, CSS, JavaScript) are now automatically included with the package - no manual copying required!
+
 ### Known Limitations
-- Font and asset files require manual copying to project assets folder
 - Maps (like Leaflet) may require resize handling when panes change
 
 ### Contributors
@@ -49,7 +51,6 @@ Special thanks to [@dantreiman](https://github.com/dantreiman) for contributing 
 ## [Unreleased]
 
 ### Planned
-- Automated asset inclusion in package distribution
 - Layout persistence (save/restore layouts)
 - Layout presets for common configurations
 - Keyboard shortcuts for pane navigation
@@ -57,6 +58,7 @@ Special thanks to [@dantreiman](https://github.com/dantreiman) for contributing 
 - Additional theme options
 - Storybook component gallery
 - Video tutorials
+- CDN hosting for faster asset delivery
 
 ---
 
